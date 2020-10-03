@@ -1,5 +1,6 @@
 package com.blakelong.hibernate.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -94,6 +95,15 @@ public class Instructor {
 
 	public void setCourses(List<Course> courses) {
 		this.courses = courses;
+	}
+	
+	public void add(Course course) {
+		if (courses == null) {
+			courses = new ArrayList<>();
+		}
+		
+		courses.add(course);
+		course.setInstructor(this);
 	}
 
 	@Override
