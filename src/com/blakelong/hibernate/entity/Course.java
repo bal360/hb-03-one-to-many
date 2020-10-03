@@ -58,6 +58,8 @@ public class Course {
 	public void setInstructor(Instructor instructor) {
 		this.instructor = instructor;
 	}
+	
+	
 
 	@Override
 	public String toString() {
